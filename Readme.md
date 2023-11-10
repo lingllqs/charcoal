@@ -93,7 +93,7 @@ Configurations are straight forward. Just change the booleans and they're yours.
 Clone and build from source:
 
 ```sh
-git clone git@github.com:LighghtEeloo/charcoal.git
+git clone git@github.com:lingllqs/charcoal.git
 cd charcoal
 cargo build --all
 ```

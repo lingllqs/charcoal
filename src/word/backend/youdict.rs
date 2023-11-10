@@ -20,7 +20,7 @@ impl Request for QueryYoudict {
             Ok(body)
         }
         let youdao_dict_url = url::Url::parse(&format!(
-            "http://dict.youdao.com/search?q={}",
+            "https://dict.youdao.com/search?q={}",
             word_query.word()
         ))?;
 
