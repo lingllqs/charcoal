@@ -12,7 +12,7 @@ pub struct AppBuilder {
 
 impl AppBuilder {
     pub fn new() -> Self {
-        let project_dirs = ProjectDirs::from("", "LitiaEeloo", "Charcoal")
+        let project_dirs = ProjectDirs::from("", "lingllqs", "Charcoal")
             .expect("No valid config directory fomulated");
         Self {
             project_dirs,

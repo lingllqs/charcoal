@@ -9,6 +9,7 @@ use super::*;
 pub struct App {}
 
 impl App {
+    // 入口
     pub async fn main() -> anyhow::Result<()> {
         env_logger::init();
 
