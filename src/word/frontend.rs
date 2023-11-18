@@ -54,7 +54,7 @@ impl PPrint for SingleEntry {
         }
 
         if normal.with_sentence {
-            println!(" {:#?} ", self.sentence);
+            // println!(" {:#?} ", self.sentence);
             for (i, (ori, trans)) in self.sentence.iter().enumerate() {
                 let idx_str = format!("{}. ", i + 1); // 例句编号
                 let idx_blank = " ".repeat(idx_str.len()); // 补空格使英语句子与中文翻译对齐

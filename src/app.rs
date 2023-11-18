@@ -13,6 +13,7 @@ impl App {
     pub async fn main() -> anyhow::Result<()> {
         env_logger::init();
 
+        // 解析命令
         match Cli::new() {
             Commands::Query(args) => App::query(args).await,
             Commands::Edit(args) => App::edit(args).await,
@@ -28,6 +29,7 @@ impl App {
 
         config.apply(&mut args);
 
+        // 检查额外参数是否合法
         let word_query = {
             let word_query = ExactQuery::new(args.query());
             if let Some(word_query) = word_query {
@@ -46,7 +48,9 @@ impl App {
             return Ok(());
         }
 
+        // 查找到单词打印
         word_entry.pprint(&word_query, &config);
+        // println!("word_entry: {:#?}", word_entry);
         if let Err(err) = word_speech.await {
             log::error!("An error occured in speech module: {:?}.", err)
         }
