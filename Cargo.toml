@@ -1,5 +1,5 @@
 [package]
-name = "charcoal-dict"
+name = "charcoal"
 version = "0.2.7"
 edition = "2021"
 authors = ["lingllqs <lingllqs@163.com>"]
